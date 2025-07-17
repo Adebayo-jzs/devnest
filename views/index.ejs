@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+<%- include("partials/nav") %>
+<section id="main">
+  <section id="home">
+    <h1><%= home.title %></h1>
+    <p><%= home.content %></p>
+  </section>
+  
+  <section id="about">
+    <h1>About Us</h1>
+    <p><%= about.content %></p>
+  </section>
+  
+  <section id="services">
+    <h1>Our Services</h1>
+    <p><%= services.content %></p>
+  </section>
+</section>
+<section class="contact" >
+    <div class="container">
+      <h2>Let’s Build Something Great</h2>
+      <p>Reach out for a free appointment  and let's discuss your next project!</p>
+      <p>Contact Us: <a href="mailto:adedejiadebayo732@gmail.com">adedejiadebayo732@gmail.com</a></p>
+    </div> 
+  </section>
+<footer>
+  <p>&copy;  <%= new Date().getFullYear() %> DEVNEST Inc. All rights reserved</p>
+</footer>

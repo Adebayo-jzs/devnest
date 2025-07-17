@@ -1,0 +1,19 @@
+<%- include("partials/header") %>
+<section id="admindash">
+
+    <h2>Admin Dashboard</h2>
+    <form method="POST" action="/admin/update">
+        <h3>Home Page</h3>
+        <input name="home_title" value="<%= data.home.title %>" /><br />
+        <textarea name="home_content"><%= data.home.content %></textarea><br />
+        
+        <h3>About Page</h3>
+        <textarea name="about_content"><%= data.about.content %></textarea><br />
+        
+        <h3>Services Page</h3>
+        <!-- <input name="services_title" value="<%= data.services.title %>" /><br /> -->
+        <textarea name="services_content"><%= data.services.content %></textarea><br />
+        
+        <button type="submit">Update Content</button>
+    </form>
+</section>
