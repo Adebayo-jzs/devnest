@@ -1,19 +1,55 @@
-<%- include("partials/header") %>
-<section id="admindash">
+ 
 
-    <h2>Admin Dashboard</h2>
-    <form method="POST" action="/admin/update">
-        <h3>Home Page</h3>
-        <input name="home_title" value="<%= data.home.title %>" /><br />
-        <textarea name="home_content"><%= data.home.content %></textarea><br />
-        
-        <h3>About Page</h3>
-        <textarea name="about_content"><%= data.about.content %></textarea><br />
-        
-        <h3>Services Page</h3>
-        <!-- <input name="services_title" value="<%= data.services.title %>" /><br /> -->
-        <textarea name="services_content"><%= data.services.content %></textarea><br />
-        
-        <button type="submit">Update Content</button>
-    </form>
+
+<%- include("partials/header") %>
+
+<section id="admindash" class="py-5 bg-light min-vh-100">
+  <div class="container">
+    <div class="card shadow-lg">
+      <div class="card-header bg-primary text-white">
+        <h2 class="mb-0">Admin Dashboard</h2>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/admin/update">
+          
+          <!-- Home Page Section -->
+          <div class="mb-4">
+            <h4 class="text-primary">Home Page</h4>
+            <div class="mb-3">
+              <label for="home_title" class="form-label">Home Title</label>
+              <input type="text" id="home_title" name="home_title" class="form-control"  value="<%= data.home.title %>" required style="width: 100%;">
+            </div>
+            <div class="mb-3">
+              <label for="home_content" class="form-label">Home Content</label>
+              <textarea id="home_content" name="home_content" class="form-control" rows="4" required><%= data.home.content %></textarea>
+            </div>
+          </div>
+
+          <!-- About Page Section -->
+          <div class="mb-4">
+            <h4 class="text-primary">About Page</h4>
+            <div class="mb-3">
+              <label for="about_content" class="form-label">About Content</label>
+              <textarea id="about_content" name="about_content" class="form-control" rows="4" required><%= data.about.content %></textarea>
+            </div>
+          </div>
+
+          <!-- Services Page Section -->
+          <div class="mb-4">
+            <h4 class="text-primary">Services Page</h4>
+            <div class="mb-3">
+              <label for="services_content" class="form-label">Services Content</label>
+              <textarea id="services_content" name="services_content" class="form-control" rows="4" required><%= data.services.content %></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-end">
+            <button type="submit" class="btn btn-success px-4">Update Content</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
 </section>

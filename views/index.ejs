@@ -1,28 +1,136 @@
+ 
+
+
 <%- include("partials/header") %>
 <%- include("partials/nav") %>
-<section id="main">
-  <section id="home">
-    <h1><%= home.title %></h1>
-    <p><%= home.content %></p>
-  </section>
-  
-  <section id="about">
-    <h1>About Us</h1>
-    <p><%= about.content %></p>
-  </section>
-  
-  <section id="services">
-    <h1>Our Services</h1>
-    <p><%= services.content %></p>
-  </section>
-</section>
-<section class="contact" >
+ 
+
+<section id="main" style="margin-top: 100px;">
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center bg-light py-5">
     <div class="container">
-      <h2>Let’s Build Something Great</h2>
-      <p>Reach out for a free appointment  and let's discuss your next project!</p>
-      <p>Contact Us: <a href="mailto:adedejiadebayo732@gmail.com">adedejiadebayo732@gmail.com</a></p>
-    </div> 
+      <h1 class="display-4"><%= home.title %></h1>
+      <p class="lead"><%= home.content %></p>
+      <a href="#contact" class="btn btn-primary btn-lg mt-3">Let's Talk</a>
+    </div>
   </section>
-<footer>
-  <p>&copy;  <%= new Date().getFullYear() %> DEVNEST Inc. All rights reserved</p>
-</footer>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2>About Us</h2>
+      <p><%= about.content %></p>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <h5>Our Mission</h5>
+          <p>To deliver quality digital solutions that empower clients to grow and lead in their industries.</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Meet the Team</h5>
+          <ul>
+            <li>Adedeji Adebayo – Lead Developer</li>
+            <li>Jane Doe – UI/UX Designer</li>
+            <li>John Smith – Project Manager</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-light py-5">
+    <div class="container">
+      <h2>Our Services</h2>
+      <p><%= services.content %></p>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Web Development</h5>
+              <p>Custom websites using modern stacks like Node.js, React, and Express.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Mobile Apps</h5>
+              <p>Native and hybrid apps that perform flawlessly on iOS and Android.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Branding & UI/UX</h5>
+              <p>Clean, intuitive interfaces that reflect your brand identity and values.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-5">
+    <div class="container">
+      <h2>What Clients Say</h2>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>“Absolutely thrilled with the website. Fast, modern, and exactly what we needed.”</p>
+            <footer class="blockquote-footer">Tunde, CEO of AlphaTech</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>“They delivered our mobile app on time and exceeded expectations.”</p>
+            <footer class="blockquote-footer">Amaka, Product Lead at QuickRide</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="bg-light py-5">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion mt-4" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              How long does a website project take?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Most web projects take 2–4 weeks depending on scope and feedback turnaround.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Do you offer support and maintenance?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yes, we provide ongoing support packages and on-demand maintenance.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- Contact Section -->
+ <%- include("partials/contactform") %>
+
+ 
+

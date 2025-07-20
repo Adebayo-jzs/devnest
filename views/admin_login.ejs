@@ -1,10 +1,130 @@
 <%- include("partials/header") %>
-<form method="POST" action="/admin/login" id="loginform">
+<!-- <form method="POST" action="/admin/login" id="loginform">
   <h2>Admin Login</h2>
     <input type="text" name="username" placeholder="Username" required /><br />
     <input type="password" name="password" placeholder="Password" required /><br />
     <button type="submit">Login</button>
-</form>
-<% if (error) { %>
-  <p style="color: red;"><%= error %></p>
-<% } %>
+</form> -->
+<style>
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+    justify-self: center;
+    align-items: center;
+ 
+  }
+ 
+ 
+    .form-container {
+    background: #ede9fe;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 360px;
+    height: fit-content;
+    margin-top: 50px;
+    text-align: center;
+    /* margin: 0; */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  input {
+    width: 93%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .signup-btn {
+    background-color: #2563eb;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .link {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .link a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .signup-link a {
+    color: black;
+    font-weight: 600;
+  }
+  .link a:hover{
+    color: purple;
+  }
+  .logo-container {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* .logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  } */
+  
+  .site-name {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #333;
+  }
+.logo a{
+    font-size: 25px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: black;
+}
+.logo span{
+    color: purple;
+}
+</style> 
+<body>
+    <div class="form-container">
+      <h3 class="logo" href="/">DEV<span style="color: #3b82f6;">NEST</span> ADMIN</h3>
+    <h2>Login</h2>
+      <form method="POST" action="/admin/login"  >
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit" >Login</button>
+      </form>
+      <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+      <% } %>
+    </body>
+    </div>
+
+
+ 
